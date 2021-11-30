@@ -14,7 +14,7 @@ class ProdutosController {
     res.send(produtos);
   }
 
-  // funcao que busca uma unica musica por id
+ 
   getProdutoById = async (req, res) => {
     // buscar o id que vem na requisicao via parmetro
     //const idParam = req.params.id;
@@ -32,7 +32,7 @@ class ProdutosController {
     }
     await produtosService.create(produto)
     .then(() => {
-      res.send({message: `Musica ${produto.titulo} Cadastrada com sucesso`})
+      res.send({message: `Produto ${produto.titulo} Cadastrado com sucesso`})
     })
     .catch((err) => {
       console.error(err);
@@ -47,7 +47,7 @@ class ProdutosController {
     const produtoEdit = req.body;
     await produtosService.edit(idParam, produtoEdit)
     .then(() => {
-      res.send({message: `Musica Editada com sucesso`})
+      res.send({message: `Produto Editado com sucesso`})
     })
     .catch( err => { 
       res.status(500).send({message: `Erro: ${err}`})
@@ -59,7 +59,7 @@ class ProdutosController {
     const idParam = req.params.id;
     await produtosService.delete(idParam)
     .then(() => {
-      res.send({message: 'Excluido com sucesso'})
+      res.send({message: 'Produto excluido com sucesso'})
     })
     .catch(err => {
       res.status(500).send({error: `Error: ${err}`});
