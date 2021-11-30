@@ -10,11 +10,12 @@ const mongoose = require('mongoose');
 // Criar e inicializar o meu Schema
 
 const produtoSchema = new mongoose.Schema({
-  nome: {type: String, required: true},
-  autor: {type: String, required: true},
-  genero: {type: String, required: true},
+  titulo: {type: String, required: true},
+  descricao: {type: String, required: true},
+  prioridade: {type: String, required: true},
+  status: {type: String, required: true},
   capa: {type: String },
-  duracao: {type: String },
+  prazo: {type: String },
   dataCriacao: { type: Date, default: Date.now }
 })
 
