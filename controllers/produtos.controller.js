@@ -32,7 +32,7 @@ class ProdutosController {
     }
     await produtosService.create(produto)
     .then(() => {
-      res.send({message: `Musica ${produto.nome} Cadastrada com sucesso`})
+      res.send({message: `Musica ${produto.titulo} Cadastrada com sucesso`})
     })
     .catch((err) => {
       console.error(err);
